@@ -30,6 +30,16 @@ while True:
         if event.type == QUIT:
             pygame.quit()
 
+        if event.type == KEYDOWN:
+            if event.key == K_UP:
+                my_direction = UP
+            if event.key == K_DOWN:
+                my_direction = DOWN
+            if event.key == K_LEFT:
+                my_direction = LEFT
+            if event.key == K_RIGHT:
+                my_direction = RIGHT
+
     if my_direction == UP:
         snake[0] = (snake[0][0],snake[0][1] - 10)
     if my_direction == DOWN:
