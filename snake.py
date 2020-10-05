@@ -20,7 +20,11 @@ apple_pos = (random.randint(0,590), random.randint(0,590))
 apple = pygame.Surface((10,10))
 apple.fill((255,0,0))
 
+clock = pygame.time.Clock()
+
 while True:
+
+    clock.tick(10)
 
     for event in pygame.event.get():
         if event.type == QUIT:
